@@ -1,6 +1,4 @@
 {
-    "username_auth": "candidatex",
-    "password_auth": "qa-is-cool",
-    "website_url": "https://www.vangoghmuseum.nl/nl",
-    "conduit_login_url": "https://qa-task.backbasecloud.com/login"
+    "VAN_GOGH_MUSEUM_URL_NL": "https://www.vangoghmuseum.nl/nl",
+    "VAN_GOGH_MUSEUM_URL_EN": "https://www.vangoghmuseum.nl/en"
 }
