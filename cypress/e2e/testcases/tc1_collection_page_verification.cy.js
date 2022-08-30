@@ -5,7 +5,7 @@ import { CollectionPage } from "../pages/CollectionPage";
 import { HomePage } from "../pages/HomePage";
 
 describe("Testcase 1: Verification collection page", { defaultCommandTimeout: 5000 }, function () {
-  const collecitonpPageSteps = new CollectionPage
+  const collecitonPageSteps = new CollectionPage
   const homePageSteps = new HomePage
   const baseTestSteps = new BaseTest
 
@@ -14,7 +14,7 @@ describe("Testcase 1: Verification collection page", { defaultCommandTimeout: 50
     cy.clearCookies()
   })
 
-  beforeEach(() => {
+  before(() => {
     cy.fixture('constants').then((constants) => {
       baseTestSteps.navigateToUrl(constants.VAN_GOGH_MUSEUM_URL_NL)
     })
@@ -26,9 +26,9 @@ describe("Testcase 1: Verification collection page", { defaultCommandTimeout: 50
     const COLLECTION_EXPLORE_PAGE_TEXT = "Ontdek de collectie";
     homePageSteps.verifyToSeeExploreCollectionLink(COLLECTION_EXPLORE_PAGE_TEXT)
     homePageSteps.clickOnCollectionExplorationByText(COLLECTION_EXPLORE_PAGE_TEXT)
-    collecitonpPageSteps.verifyCollectionPageUrl()
-    collecitonpPageSteps.verifyCollectionPageTitleIsDisplayed()
-    collecitonpPageSteps.verifyCollectionPageSearchFieldIsDisplayed()
+    collecitonPageSteps.verifyCollectionPageUrl()
+    collecitonPageSteps.verifyCollectionPageTitleIsDisplayed()
+    collecitonPageSteps.verifyCollectionPageSearchFieldIsDisplayed()
   });
 
 

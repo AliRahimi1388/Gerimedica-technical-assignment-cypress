@@ -15,8 +15,17 @@ export class CollectionPage {
         cy.url().should('eq', COLLECTION_PAGE_URL)
     }
 
+    searchPaintByTitle(paintText) {
+        cy.get('[placeholder="Zoek een kunstwerk"]').type(paintText + '{Enter}')
+    }
 
-
+    verifyResultsNumberIsMoreThan(number) {
+        cy.get('[class="results"]')
+            .invoke('text')
+            .then(parseInt)
+            .should('be.a', 'number')
+            .should('be.greaterThan', number)
+    }
 }
 
 const COLLECTION_PAGE_TITLE = "Collectie";
