@@ -7,7 +7,7 @@ export class BaseTest {
     }
 
     acceptCookies() {
-        cy.contains('Akkoord').click()
+        cy.get('.btn').contains('Akkoord').click()
     }
 
 }

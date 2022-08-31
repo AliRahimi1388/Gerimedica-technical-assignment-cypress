@@ -16,7 +16,7 @@ export class CollectionPage {
     }
 
     searchPaintByTitle(paintText) {
-        cy.get('[placeholder="Zoek een kunstwerk"]').type(paintText + '{Enter}')
+        cy.get('[placeholder="Zoek een kunstwerk"]').type(paintText + "{Enter}")
     }
 
     verifyResultsNumberIsMoreThan(number) {
@@ -25,6 +25,10 @@ export class CollectionPage {
             .then(parseInt)
             .should('be.a', 'number')
             .should('be.greaterThan', number)
+    }
+
+    clickOnFirstResultFirst() {
+        cy.get('[role="article"]').first().click()
     }
 }
 

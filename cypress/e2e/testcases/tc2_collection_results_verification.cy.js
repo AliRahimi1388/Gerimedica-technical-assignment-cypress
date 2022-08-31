@@ -2,7 +2,6 @@
 
 import { BaseTest } from "../pages/BaseTest";
 import { CollectionPage } from "../pages/CollectionPage";
-import { HomePage } from "../pages/HomePage";
 
 describe("Testcase 2: Verification collection page result have more than specific size ", { defaultCommandTimeout: 5000 }, function () {
   const collecitonPageSteps = new CollectionPage
