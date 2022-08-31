@@ -9,7 +9,4 @@ export class HomePage {
         cy.get('.card-overview-content-end > .cta-list > ul > :nth-child(1) > .link').scrollIntoView().should('contain.text', collectionText)
     }
 
-
-
-
 }
